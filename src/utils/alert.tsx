@@ -1,8 +1,8 @@
 import {Alert, HStack, VStack} from 'native-base';
 import React from 'react';
 import {Text} from 'react-native';
-import colors from '../theme/colors';
-import {metrics} from '../theme/layout';
+import colors from '../themes/colors';
+import {metrics} from '../themes/layout';
 
 export const MessageType = {
   success: 'success',
