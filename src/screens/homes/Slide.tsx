@@ -1,4 +1,4 @@
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Swiper from 'react-native-swiper';
 import colors from '../../themes/colors';
@@ -10,8 +10,9 @@ import {
 } from '../../themes/layout';
 interface slideProps {
   data: any;
+  onPress: (value: any) => void;
 }
-const Slide: React.FC<slideProps> = ({data}) => {
+const Slide: React.FC<slideProps> = ({data, onPress}) => {
   return (
     data && (
       <View style={styles.container}>
@@ -22,14 +23,16 @@ const Slide: React.FC<slideProps> = ({data}) => {
           activeDotColor={colors.whiteSmoke}>
           {data.map((item: any, index: any) => {
             return (
-              <Image
-                resizeMode="cover"
-                key={index}
-                style={styles.img}
-                source={{
-                  uri: item.image_url,
-                }}
-              />
+              <TouchableOpacity onPress={() => onPress(item)}>
+                <Image
+                  resizeMode="cover"
+                  key={index}
+                  style={styles.img}
+                  source={{
+                    uri: item.image_url,
+                  }}
+                />
+              </TouchableOpacity>
             );
           })}
         </Swiper>

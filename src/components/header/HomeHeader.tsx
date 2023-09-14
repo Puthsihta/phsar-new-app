@@ -10,8 +10,10 @@ import {
   widthRespone,
 } from '../../themes/layout';
 import {openDrawer} from '../../services/navigate/drawer';
-
-const HomeHeader = () => {
+interface props {
+  onSearch: () => void;
+}
+const HomeHeader: React.FC<props> = ({onSearch}) => {
   return (
     <SafeAreaView
       style={{
@@ -34,7 +36,7 @@ const HomeHeader = () => {
           ]}
         />
         <AntDesign
-          onPress={() => {}}
+          onPress={onSearch}
           name="search1"
           size={widthRespone(6)}
           color={colors.iconColor}

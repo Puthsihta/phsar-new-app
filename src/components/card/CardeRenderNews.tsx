@@ -22,7 +22,7 @@ import colors from '../../themes/colors';
 interface newsData {
   value: any;
   index: number;
-  onPress: () => void;
+  onPress: (value: any) => void;
 }
 
 const CardeRenderNews: React.FC<newsData> = ({value, index, onPress}) => {
@@ -32,7 +32,7 @@ const CardeRenderNews: React.FC<newsData> = ({value, index, onPress}) => {
         styles.container,
         {marginTop: index == 0 ? paddingHorizontal : 0},
       ]}
-      onPress={onPress}>
+      onPress={() => onPress(value.id)}>
       <View style={[styles.wrapImage, style.center]}>
         {value.image_url ? (
           Platform.OS == 'ios' ? (

@@ -1,20 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {ActivityIndicator} from 'react-native';
 import AutoHeightWebView from 'react-native-autoheight-webview';
-import {useAppDispatch} from '../../hooks/dispatch';
 import colors from '../../themes/colors';
-import {paddingHorizontal, screenWidth} from '../../themes/layout';
+import {paddingHorizontal} from '../../themes/layout';
 interface data {
   description: string;
-  fontSize?: any;
-  refreshing?: any;
+  fontSize: any;
 }
-const WebViewAutoHeight: React.FC<data> = ({
-  description,
-  fontSize,
-  refreshing,
-}) => {
-  const dispatch = useAppDispatch();
+const WebViewAutoHeight: React.FC<data> = ({description, fontSize}) => {
+  const [loading, setLoading] = useState(true);
   const loadingComponent = () => (
     <ActivityIndicator
       color={colors.baseColor}
@@ -25,47 +19,45 @@ const WebViewAutoHeight: React.FC<data> = ({
 
   return (
     <>
-      {refreshing && loadingComponent()}
+      {/* {loading && loadingComponent()} */}
       <AutoHeightWebView
         dataDetectorTypes="none"
         scrollEnabled={false}
-        mixedContentMode="compatibility"
-        style={{width: '100%'}}
+        showsHorizontalScrollIndicator={false}
+        style={{
+          width: '100%',
+          minHeight: 1,
+        }}
         customStyle={`
-          * {
-        font-family: 'Battambang' !important;
-            line-height:${1.5} !important;
-            letter-spacing:${0.3}px !important;
-            font-size:${fontSize}px !important;
-            color: ${colors.blackColor};
-            text-align: justify !important;
-            object-fit : contain;
-            padding-left: 6px;
-            padding-right: 6px;
-          }
-          li{
-              color: ${colors.baseColor};
-              font-size:${17}px;
-          }
-          img {
-            width: ${screenWidth(180)}px !important;
-            height: auto;
-            margin-top: ${paddingHorizontal / 1.5};
-          }
-          p{
-            margin-bottom:5px !important;
-            line-height:${1.5} !important;
-            letter-spacing:${0.3}px !important;
-          }
-          p strong {
-            padding-left: 0px !important;
-          }
-          iframe:{
-            width: 100%;
-            height: auto;
-            margin-bottom: ${paddingHorizontal / 1.5};
-          }
-        `}
+                              * {
+                              font-family: 'Battambang' !important;
+                              line-height:${1.5} !important;
+                              letter-spacing:${0.3}px !important;
+                              font-size:${fontSize}px !important;
+                              color: ${colors.titleColor};
+                              width: 100% !important;
+                              object-fit : contain;
+                          }
+                          li{
+                              color: ${colors.baseColor};
+                              font-size:${17}px;
+                          }
+                          img {
+                          width: 100%;
+                          height: auto;
+                          margin-top: ${paddingHorizontal / 1.5};
+                          }
+                          p{
+                              margin-bottom:5px !important;
+                              line-height:${1.5} !important;
+                              letter-spacing:${0.3}px !important;
+                          }
+                          iframe:{
+                            width: 100%;
+                            height: auto;
+                            margin-bottom: ${paddingHorizontal / 1.5};
+                          }
+                          `}
         files={[
           {
             href: 'cssfileaddress',
@@ -75,6 +67,7 @@ const WebViewAutoHeight: React.FC<data> = ({
         ]}
         originWhitelist={['*']}
         source={{
+          baseUrl: '',
           html: `<html><head><link href="https://fonts.googleapis.com/css?family=Battambang&display=swap" rel="stylesheet">
                                           <meta name="viewport" , initial-scale=1.0"></head><body>
                                           ${description}
@@ -83,11 +76,11 @@ const WebViewAutoHeight: React.FC<data> = ({
         viewportContent={
           'width=device-width, initial-scale=1.0, user-scalable=no'
         }
-        // onLoadStart={() => dispatch(handleRefreshing(true))}
-        // onLoadEnd={() => dispatch(handleRefreshing(false))}
+        // onLoadStart={() => setLoading(true)}
+        // onLoadEnd={() => setLoading(false)}
       />
     </>
   );
 };
 
-export default React.memo(WebViewAutoHeight);
+export default WebViewAutoHeight;

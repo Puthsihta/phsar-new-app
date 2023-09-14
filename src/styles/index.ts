@@ -1,6 +1,11 @@
 import {StyleSheet} from 'react-native';
 import colors from '../themes/colors';
-import {screenHeight, screenWidth, widthRespone} from '../themes/layout';
+import {
+  paddingHorizontal,
+  screenHeight,
+  screenWidth,
+  widthRespone,
+} from '../themes/layout';
 import {size} from '../themes/fonts';
 import {
   Battambang,
@@ -166,6 +171,9 @@ const style = StyleSheet.create({
     backgroundColor: 'rgba(53, 76, 163, 0.4)',
     top: -screenWidth(50),
     right: -screenWidth(50),
+  },
+  btn: {
+    marginVertical: paddingHorizontal,
   },
 });
 export default style;

@@ -1,75 +1,75 @@
-import {SafeAreaView, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import style from '../../styles';
+import {goBack, navigate} from '../../services/navigate';
+import {screenWidth, widthRespone} from '../../themes/layout';
 import colors from '../../themes/colors';
-import fonts, {size} from '../../themes/fonts';
-import {goBack} from '../../services/navigate';
-import {screenWidth} from '../../themes/layout';
+import {TextTranslateBold} from '../customs/TextTranslate';
+import {LabelBold} from '../customs/Label';
+import {size} from '../../themes/fonts';
 
 const CustomHeader = ({
   title,
   rightIcon,
+  is_translate,
+  is_shadow = true,
   is_back,
   is_home = false,
-  onGoBack,
-  is_background,
   is_title_center = true,
+  onGoBack,
 }: any) => {
   return (
-    <>
-      <SafeAreaView
-        style={{
-          backgroundColor: is_background ? colors.baseColor : colors.whiteSmoke,
-        }}
-      />
-
+    <View style={[styles.container, is_shadow ? {...style.shadowHeader} : {}]}>
+      {!is_back ? (
+        <View style={styles.icon} />
+      ) : (
+        <TouchableOpacity
+          onPress={() => {
+            !is_back
+              ? null
+              : is_home
+              ? navigate('MainHome')
+              : onGoBack
+              ? onGoBack()
+              : goBack();
+          }}
+          style={styles.icon}>
+          {is_home ? (
+            <Ionicons
+              name={'home-outline'}
+              size={widthRespone(7)}
+              color={colors.whiteColor}
+            />
+          ) : (
+            <Ionicons
+              name={'chevron-back'}
+              size={widthRespone(7)}
+              color={colors.whiteColor}
+            />
+          )}
+        </TouchableOpacity>
+      )}
       <View
         style={[
-          styles.container,
+          styles.title,
           {
-            backgroundColor: is_background
-              ? colors.baseColor
-              : colors.whiteSmoke,
+            justifyContent: is_title_center ? 'center' : 'flex-start',
+            alignItems: is_title_center ? 'center' : 'flex-start',
           },
         ]}>
-        {!is_back ? (
-          <View style={styles.icon} />
-        ) : (
-          <TouchableOpacity
-            onPress={() => {
-              !is_back ? null : onGoBack ? onGoBack() : goBack();
-            }}
-            style={styles.icon}>
-            {is_home ? (
-              <Ionicons
-                name={'home-outline'}
-                size={screenWidth(30)}
-                color={is_background ? colors.whiteColor : colors.blackColor}
-              />
-            ) : (
-              <Ionicons
-                name={'chevron-back'}
-                size={screenWidth(30)}
-                color={is_background ? colors.whiteColor : colors.blackColor}
-              />
-            )}
-          </TouchableOpacity>
-        )}
-        <View
-          style={[
-            styles.title,
-            {
-              justifyContent: is_title_center ? 'center' : 'flex-start',
-              alignItems: is_title_center ? 'center' : 'flex-start',
-            },
-          ]}>
-          {/* <TextTranslateNormal numberOfLines={1} style={styles.titleText}>
+        {is_translate ? (
+          <TextTranslateBold numberOfLines={1} style={styles.titleText}>
             {title}
-          </TextTranslateNormal> */}
-        </View>
-        <View style={styles.icon}>{rightIcon}</View>
+          </TextTranslateBold>
+        ) : (
+          <LabelBold numberOfLines={1} style={styles.titleText}>
+            {title}
+          </LabelBold>
+        )}
       </View>
-    </>
+      <View style={styles.icon}>{rightIcon}</View>
+    </View>
   );
 };
 
@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    height: screenWidth(60), // 55
+    height: screenWidth(55), // 55
+    backgroundColor: colors.baseColor,
   },
   icon: {
     width: screenWidth(60), // 60
@@ -92,6 +93,6 @@ const styles = StyleSheet.create({
   },
   titleText: {
     color: colors.whiteColor,
-    fontSize: size.font22, // 18
+    fontSize: size.font20, // 18
   },
 });

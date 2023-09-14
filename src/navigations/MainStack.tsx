@@ -3,6 +3,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainDrawer from './MainDrawer';
 import HomeScreen from '../containers/home/HomeScreen';
+import NewDetailScreen from '../containers/news/NewDetailScreen';
 
 const Stack = createNativeStackNavigator();
 const MainStack = () => {
@@ -14,6 +15,7 @@ const MainStack = () => {
         presentation: 'card',
       }}>
       <Stack.Screen name="MainHome" component={MainDrawer} />
+      <Stack.Screen name={'NewDetail'} component={NewDetailScreen} />
     </Stack.Navigator>
   );
 };

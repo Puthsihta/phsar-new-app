@@ -6,23 +6,39 @@ import colors from '../../themes/colors';
 const BaseComponent = ({
   children,
   title,
+  is_main,
+  rightIcon,
+  is_back = true,
   is_translate = true,
-  backgroundColor,
+  is_home,
+  is_title_center = true,
+  onGoBack,
 }: any) => {
   return (
     <>
-      <SafeAreaView style={{backgroundColor: colors.whiteColor}} />
+      <SafeAreaView style={{backgroundColor: colors.baseColor}} />
       <KeyboardAvoidingView
-        enabled
-        style={{flex: 1, zIndex: 9}}
-        behavior={Platform.OS == 'ios' ? 'padding' : undefined}
-        keyboardVerticalOffset={Platform.OS == 'ios' ? 0 : undefined}>
-        <CustomHeader title={title} is_translate={is_translate} />
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 25}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={{
+          flex: 1,
+          zIndex: 9,
+        }}>
         <View
           style={{
             flex: 1,
-            backgroundColor: backgroundColor ? backgroundColor : colors.bgColor,
           }}>
+          <>
+            <CustomHeader
+              title={title}
+              is_translate={is_translate}
+              rightIcon={rightIcon}
+              is_back={is_back}
+              is_home={is_home}
+              is_title_center={is_title_center}
+              onGoBack={onGoBack}
+            />
+          </>
           {children}
         </View>
       </KeyboardAvoidingView>
