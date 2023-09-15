@@ -1,6 +1,6 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
-import {paddingHorizontal} from '../../themes/metrics';
+import {paddingHorizontal} from '../../themes/layout';
 
 const ClearItem = () => {
   return <View style={{height: paddingHorizontal * 2}} />;

@@ -180,7 +180,9 @@ const HomeScreen = () => {
     }, 200);
   };
 
-  const onSearch = () => {};
+  const onSearch = () => {
+    navigate('SearchScreen');
+  };
 
   return (
     <>
