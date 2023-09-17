@@ -32,7 +32,7 @@ const data = {
 const NewDetailScreen = (props: any) => {
   useStatusBar('light-content', colors.baseColor);
   const {id} = props.route.params;
-  const [fontSize, setFontSize] = useState(size.font22);
+  const [fontSize, setFontSize] = useState(size.font18);
 
   const onShare = async () => {
     // dispatch(spinningLoading(true));
@@ -55,7 +55,7 @@ const NewDetailScreen = (props: any) => {
   };
 
   const onDecreaseFont = () => {
-    if (fontSize <= size.font18) {
+    if (fontSize <= size.font16) {
       return;
     }
     setFontSize(fontSize - 2);
@@ -66,13 +66,13 @@ const NewDetailScreen = (props: any) => {
       <View style={{marginTop: paddingHorizontal / 4}}>
         <HStack>
           <TouchableOpacity
-            disabled={fontSize <= size.font18}
+            disabled={fontSize <= size.font16}
             onPress={onDecreaseFont}>
             <Label
               style={[
                 {
                   color:
-                    fontSize <= size.font18
+                    fontSize <= size.font16
                       ? colors.descriptionColor
                       : colors.whiteColor,
                 },

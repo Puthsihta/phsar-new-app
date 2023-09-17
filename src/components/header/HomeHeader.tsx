@@ -56,6 +56,6 @@ const styles = StyleSheet.create({
     height: screenWidth(65), // 55
     paddingHorizontal: paddingHorizontal,
     borderBottomWidth: 0.5,
-    borderColor: colors.borderColorItem,
+    borderColor: colors.borderColor,
   },
 });

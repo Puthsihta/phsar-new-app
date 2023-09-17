@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.grayColor,
   },
   title: {
-    fontSize: size.font24,
+    fontSize: size.font20,
     color: colors.baseColor,
     marginBottom: paddingHorizontal / 2,
   },

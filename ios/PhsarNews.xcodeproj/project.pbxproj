@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PhsarNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PhsarNewsTests.m */; };
+		04E078672AB6B07D0009ABE1 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078572AB6B07C0009ABE1 /* OpenSans-SemiBold.ttf */; };
+		04E078682AB6B07D0009ABE1 /* Khmer-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078582AB6B07C0009ABE1 /* Khmer-Regular.ttf */; };
+		04E078692AB6B07D0009ABE1 /* GoogleSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078592AB6B07C0009ABE1 /* GoogleSans-SemiBold.ttf */; };
+		04E0786A2AB6B07D0009ABE1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E0785A2AB6B07C0009ABE1 /* Poppins-Medium.ttf */; };
+		04E0786B2AB6B07D0009ABE1 /* GoogleSans-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E0785B2AB6B07C0009ABE1 /* GoogleSans-Normal.ttf */; };
+		04E0786C2AB6B07D0009ABE1 /* Moul-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E0785C2AB6B07C0009ABE1 /* Moul-Regular.ttf */; };
+		04E0786D2AB6B07D0009ABE1 /* GoogleSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E0785D2AB6B07C0009ABE1 /* GoogleSans-Bold.ttf */; };
+		04E0786E2AB6B07D0009ABE1 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E0785E2AB6B07C0009ABE1 /* OpenSans-Light.ttf */; };
+		04E0786F2AB6B07D0009ABE1 /* OpenSans-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E0785F2AB6B07C0009ABE1 /* OpenSans-Normal.ttf */; };
+		04E078702AB6B07D0009ABE1 /* KhmerOSMoul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078602AB6B07C0009ABE1 /* KhmerOSMoul.ttf */; };
+		04E078712AB6B07D0009ABE1 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078612AB6B07C0009ABE1 /* OpenSans-ExtraBold.ttf */; };
+		04E078722AB6B07D0009ABE1 /* Battambang-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078622AB6B07C0009ABE1 /* Battambang-Bold.ttf */; };
+		04E078732AB6B07D0009ABE1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078632AB6B07C0009ABE1 /* OpenSans-Bold.ttf */; };
+		04E078742AB6B07D0009ABE1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078642AB6B07C0009ABE1 /* Poppins-Bold.ttf */; };
+		04E078752AB6B07D0009ABE1 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078652AB6B07C0009ABE1 /* Lobster-Regular.ttf */; };
+		04E078762AB6B07D0009ABE1 /* Battambang-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04E078662AB6B07C0009ABE1 /* Battambang-Regular.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-PhsarNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-PhsarNews.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -30,6 +46,22 @@
 		00E356EE1AD99517003FC87E /* PhsarNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhsarNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PhsarNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhsarNewsTests.m; sourceTree = "<group>"; };
+		04E078572AB6B07C0009ABE1 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		04E078582AB6B07C0009ABE1 /* Khmer-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khmer-Regular.ttf"; sourceTree = "<group>"; };
+		04E078592AB6B07C0009ABE1 /* GoogleSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		04E0785A2AB6B07C0009ABE1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		04E0785B2AB6B07C0009ABE1 /* GoogleSans-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Normal.ttf"; sourceTree = "<group>"; };
+		04E0785C2AB6B07C0009ABE1 /* Moul-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Moul-Regular.ttf"; sourceTree = "<group>"; };
+		04E0785D2AB6B07C0009ABE1 /* GoogleSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GoogleSans-Bold.ttf"; sourceTree = "<group>"; };
+		04E0785E2AB6B07C0009ABE1 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		04E0785F2AB6B07C0009ABE1 /* OpenSans-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Normal.ttf"; sourceTree = "<group>"; };
+		04E078602AB6B07C0009ABE1 /* KhmerOSMoul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KhmerOSMoul.ttf; sourceTree = "<group>"; };
+		04E078612AB6B07C0009ABE1 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		04E078622AB6B07C0009ABE1 /* Battambang-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Battambang-Bold.ttf"; sourceTree = "<group>"; };
+		04E078632AB6B07C0009ABE1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		04E078642AB6B07C0009ABE1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		04E078652AB6B07C0009ABE1 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		04E078662AB6B07C0009ABE1 /* Battambang-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Battambang-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PhsarNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhsarNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PhsarNews/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = PhsarNews/AppDelegate.mm; sourceTree = "<group>"; };
@@ -83,6 +115,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04E078562AB6B07C0009ABE1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				04E078572AB6B07C0009ABE1 /* OpenSans-SemiBold.ttf */,
+				04E078582AB6B07C0009ABE1 /* Khmer-Regular.ttf */,
+				04E078592AB6B07C0009ABE1 /* GoogleSans-SemiBold.ttf */,
+				04E0785A2AB6B07C0009ABE1 /* Poppins-Medium.ttf */,
+				04E0785B2AB6B07C0009ABE1 /* GoogleSans-Normal.ttf */,
+				04E0785C2AB6B07C0009ABE1 /* Moul-Regular.ttf */,
+				04E0785D2AB6B07C0009ABE1 /* GoogleSans-Bold.ttf */,
+				04E0785E2AB6B07C0009ABE1 /* OpenSans-Light.ttf */,
+				04E0785F2AB6B07C0009ABE1 /* OpenSans-Normal.ttf */,
+				04E078602AB6B07C0009ABE1 /* KhmerOSMoul.ttf */,
+				04E078612AB6B07C0009ABE1 /* OpenSans-ExtraBold.ttf */,
+				04E078622AB6B07C0009ABE1 /* Battambang-Bold.ttf */,
+				04E078632AB6B07C0009ABE1 /* OpenSans-Bold.ttf */,
+				04E078642AB6B07C0009ABE1 /* Poppins-Bold.ttf */,
+				04E078652AB6B07C0009ABE1 /* Lobster-Regular.ttf */,
+				04E078662AB6B07C0009ABE1 /* Battambang-Regular.ttf */,
+			);
+			name = fonts;
+			path = ../android/app/src/main/assets/fonts;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* PhsarNews */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +172,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				04E078562AB6B07C0009ABE1 /* fonts */,
 				13B07FAE1A68108700A75B9A /* PhsarNews */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PhsarNewsTests */,
@@ -242,8 +299,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E0786C2AB6B07D0009ABE1 /* Moul-Regular.ttf in Resources */,
+				04E078692AB6B07D0009ABE1 /* GoogleSans-SemiBold.ttf in Resources */,
+				04E078762AB6B07D0009ABE1 /* Battambang-Regular.ttf in Resources */,
+				04E0786F2AB6B07D0009ABE1 /* OpenSans-Normal.ttf in Resources */,
+				04E078742AB6B07D0009ABE1 /* Poppins-Bold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				04E0786B2AB6B07D0009ABE1 /* GoogleSans-Normal.ttf in Resources */,
+				04E078672AB6B07D0009ABE1 /* OpenSans-SemiBold.ttf in Resources */,
+				04E0786D2AB6B07D0009ABE1 /* GoogleSans-Bold.ttf in Resources */,
+				04E0786A2AB6B07D0009ABE1 /* Poppins-Medium.ttf in Resources */,
+				04E078732AB6B07D0009ABE1 /* OpenSans-Bold.ttf in Resources */,
+				04E078722AB6B07D0009ABE1 /* Battambang-Bold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				04E078752AB6B07D0009ABE1 /* Lobster-Regular.ttf in Resources */,
+				04E078702AB6B07D0009ABE1 /* KhmerOSMoul.ttf in Resources */,
+				04E0786E2AB6B07D0009ABE1 /* OpenSans-Light.ttf in Resources */,
+				04E078682AB6B07D0009ABE1 /* Khmer-Regular.ttf in Resources */,
+				04E078712AB6B07D0009ABE1 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

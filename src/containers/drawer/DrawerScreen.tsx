@@ -1,4 +1,5 @@
 import {
+  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -46,35 +47,43 @@ const Data = [
 
 const DrawerScreen = () => {
   return (
-    <View style={style.flexContainer}>
-      <FastImage
-        source={AppImages.logoApp}
-        resizeMode="contain"
-        style={styles.img_logo}
+    <>
+      <SafeAreaView
+        style={{
+          backgroundColor: colors.whiteColor,
+        }}
       />
-      <View style={styles.container}>
+      <View style={style.flexContainer}>
+        <FastImage
+          source={AppImages.logoApp}
+          resizeMode="contain"
+          style={styles.img_logo}
+        />
+        <View style={{borderTopWidth: 2, borderColor: colors.borderColor}} />
         <ScrollView showsVerticalScrollIndicator={false}>
-          {Data.map((item, index) => (
-            <TouchableOpacity onPress={closeDrawer} style={styles.wrapItem}>
-              <HStack alignItems={'center'} space={3}>
-                {item.image_url && (
-                  <FastImage
-                    source={{uri: item.image_url}}
-                    style={styles.img}
-                  />
-                )}
-                <LabelBold>{item.name}</LabelBold>
-              </HStack>
-              <AntDesign
-                name="right"
-                size={widthRespone(7)}
-                color={colors.placeHolderColor}
-              />
-            </TouchableOpacity>
-          ))}
+          <View style={styles.container}>
+            {Data.map((item, index) => (
+              <TouchableOpacity onPress={closeDrawer} style={styles.wrapItem}>
+                <HStack alignItems={'center'} space={3}>
+                  {item.image_url && (
+                    <FastImage
+                      source={{uri: item.image_url}}
+                      style={styles.img}
+                    />
+                  )}
+                  <LabelBold>{item.name}</LabelBold>
+                </HStack>
+                <AntDesign
+                  name="right"
+                  size={widthRespone(7)}
+                  color={colors.placeHolderColor}
+                />
+              </TouchableOpacity>
+            ))}
+          </View>
         </ScrollView>
       </View>
-    </View>
+    </>
   );
 };
 
@@ -87,8 +96,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   container: {
-    borderTopWidth: 2,
-    borderColor: colors.borderColor,
     // backgroundColor: 'red',
     padding: paddingHorizontal,
   },
